@@ -1,0 +1,25 @@
+delete all 
+fetch 4z3g
+
+create ch_A=(c;a &! R;MES)
+create lig1=(r;MES & c;a)
+set_color red2, [1,0.2,0.2]
+set_color green2, [0.2,0.6,0.2]
+color red2,  ch_A
+color green2, lig1
+
+hide lines
+show cartoon, ch_A
+show sticks, lig1
+
+select sur, lig1 and n. O1+HN+HN1+HN2+O2 
+select cont, (ch_A  within 2.8 of sur) 
+select ccont, br. cont 
+
+show sticks, ccont
+
+distance d1 = cont, (lig1), 2.8 
+
+color lightmagenta, d1 
+
+zoom lig1
